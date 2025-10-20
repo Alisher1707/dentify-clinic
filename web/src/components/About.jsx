@@ -8,15 +8,15 @@ const About = () => {
     uz: {
       badge: "Biz haqimizda",
       title: "DENTIFY CLINIC",
-      description1: "DENTIFY CLINIC - bu zamonaviy tibbiyot muassasasi bo'lib, tibbiyotning eng yaxshi an'analari va ilg'or texnologiyalarni o'zida mujassam etadi. Ochiqligimizdan beri biz bemorlarimizga nafaqat samarali davolashni, balki yuqori darajadagi g'amxo'rlik va qulaylikni taqdim etishga intilamiz.",
-      description2: "Bizning falsafamiz har bir bemorga individual yondashish, ishonchli munosabatlar yaratish va davolanish jarayonining barcha bosqichlarida maksimal ochiqlikni ta'minlashdan iborat.",
+      description1: "zamonaviy stomatologiya klinikasi bo'lib, og'iz bo'shligi salomatligini saqlash va tiklashda ilg'or texnologiyalardan foydalanadi. Biz har bir bemorga professional xizmat, og'riqsiz davolash va qulay muhitni taqdim etishga intilamiz.",
+      description2: "Klinikamizda yuqori malakali shifokorlar, zamonaviy uskunalar va individual yondashuv orqali tishlaringizning sog'ligi va chiroyli tabassumingizni ta'minlaymiz. Profilaktikadan tortib, murakkab implantatsiya va estetik stomatologiyagacha barcha xizmatlarni ko'rsatamiz.",
       button: "Xizmatlarimiz"
     },
     ru: {
       badge: "О нас",
       title: "DENTIFY CLINIC",
-      description1: "это современное медицинское учреждение, воплощающее в себе лучшие традиции медицины и передовые технологии. С момента нашего открытия мы стремимся предоставить нашим пациентам не только эффективное лечение, но и высокий уровень заботы и комфорта.",
-      description2: "Наша философия заключается в индивидуальном подходе к каждому пациенту, создании доверительных отношений и обеспечении максимальной открытости на всех этапах лечения.",
+      description1: "современная стоматологическая клиника, использующая передовые технологии в сохранении и восстановлении здоровья полости рта. Мы стремимся предоставить каждому пациенту профессиональное обслуживание, безболезненное лечение и комфортную атмосферу.",
+      description2: "В нашей клинике высококвалифицированные врачи, современное оборудование и индивидуальный подход обеспечивают здоровье ваших зубов и красивую улыбку. Мы предоставляем все услуги от профилактики до сложной имплантации и эстетической стоматологии.",
       button: "Наши услуги"
     }
   };
@@ -42,7 +42,7 @@ const About = () => {
 
           <div className="about-text">
             <p className="about-description">
-              {t.description1}
+              <span className="clinic-name-highlight">DENTIFY CLINIC</span> - {t.description1}
             </p>
 
             <p className="about-description">

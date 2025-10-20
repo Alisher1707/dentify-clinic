@@ -6,13 +6,13 @@ const Hero = () => {
 
   const translations = {
     uz: {
-      title: "DENTIFY CLINIC",
+      clinicName: "DENTIFY CLINIC",
       subtitle: "Sizning tabassumingiz - bizning maqsadimiz! Zamonaviy stomatologiya xizmatlari, professional shifokorlar va qulay narxlar. Sog'lom tishlar va chiroyli tabassum uchun bizni tanlang!",
       button1: "Bepul konsultatsiya",
       button2: "📞 +998 99 236 06 31"
     },
     ru: {
-      title: "DENTIFY CLINIC",
+      clinicName: "DENTIFY CLINIC",
       subtitle: "Ваша улыбка - наша цель! Современные стоматологические услуги, профессиональные врачи и доступные цены. Выбирайте нас для здоровых зубов и красивой улыбки!",
       button1: "Бесплатная консультация",
       button2: "📞 +998 99 236 06 31"
@@ -26,7 +26,9 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-content">
           <div className="hero-text">
-            <h1 className="hero-title">{t.title}</h1>
+            <h1 className="hero-title">
+              <span className="clinic-name">{t.clinicName}</span>
+            </h1>
             <p className="hero-subtitle">{t.subtitle}</p>
 
             <div className="hero-buttons">

@@ -29,20 +29,21 @@
 .hero-title {
   font-size: 3.5rem;
   font-weight: 700;
-  color: #2d3748;
   line-height: 1.2;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #7B2869 0%, #a855f7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+}
+
+.clinic-name {
+  color: #7B2869;
+  font-weight: 800;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #4a5568;
+  color: #2d3748;
   line-height: 1.8;
   margin-bottom: 2.5rem;
+  font-weight: 500;
 }
 
 .hero-buttons {
@@ -52,11 +53,11 @@
 }
 
 .hero-btn {
-  padding: 1rem 2.5rem;
+  padding: 0.9rem 2.8rem;
   font-size: 1.1rem;
   font-weight: 600;
   border: none;
-  border-radius: 50px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
   display: inline-flex;
@@ -65,13 +66,14 @@
 }
 
 .hero-btn-primary {
-  background: linear-gradient(135deg, #7B2869 0%, #a855f7 100%);
+  background: #7B2869;
   color: white;
   box-shadow: 0 4px 15px rgba(123, 40, 105, 0.3);
 }
 
 .hero-btn-primary:hover {
-  transform: translateY(-3px);
+  background: #5f1d52;
+  transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(123, 40, 105, 0.4);
 }
 
