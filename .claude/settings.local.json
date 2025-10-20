@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(if not exist \"c:\\Users\\DELL-PC\\Desktop\\dentify\\web\\src\\components\" mkdir \"c:\\Users\\DELL-PC\\Desktop\\dentify\\web\\src\\components\")",
+      "Bash(mkdir:*)",
+      "Bash(npm install:*)",
+      "Bash(npm cache clean:*)",
+      "Bash(cat:*)",
+      "Bash(pnpm remove:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
