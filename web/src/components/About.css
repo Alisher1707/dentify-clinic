@@ -1,0 +1,235 @@
+.about {
+  width: 100%;
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Image Section */
+.about-image {
+  position: relative;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image-wrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 80px rgba(123, 40, 105, 0.2);
+}
+
+.clinic-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.image-wrapper:hover .clinic-image {
+  transform: scale(1.05);
+}
+
+.image-badge {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: #7B2869;
+  color: white;
+  padding: 0.9rem 3.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(123, 40, 105, 0.3);
+  animation: slideInDown 0.8s ease-out 0.3s both;
+}
+
+/* Text Section */
+.about-text {
+  animation: fadeInRight 1s ease-out;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.title-highlight {
+  background: linear-gradient(135deg, #7B2869 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.about-btn {
+  margin-top: 2rem;
+  padding: 0.9rem 2.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #7B2869;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(123, 40, 105, 0.3);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about-btn:hover {
+  background: #5f1d52;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(123, 40, 105, 0.4);
+}
+
+.about-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-content {
+    gap: 3rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .clinic-image {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 0;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .about-description {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .clinic-image {
+    height: 350px;
+  }
+
+  .image-badge {
+    top: 20px;
+    left: 20px;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.9rem;
+  }
+
+  .about-btn {
+    display: flex;
+    margin: 1.5rem auto 0;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+
+  .about-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 3rem 0;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+  }
+
+  .about-description {
+    font-size: 0.95rem;
+  }
+
+  .clinic-image {
+    height: 300px;
+  }
+}
