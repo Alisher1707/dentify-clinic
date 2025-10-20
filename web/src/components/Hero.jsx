@@ -8,14 +8,14 @@ const Hero = () => {
     uz: {
       title: "DENTIFY CLINIC",
       subtitle: "Sizning tabassumingiz - bizning maqsadimiz! Zamonaviy stomatologiya xizmatlari, professional shifokorlar va qulay narxlar. Sog'lom tishlar va chiroyli tabassum uchun bizni tanlang!",
-      button1: "Qabulga yozilish",
-      button2: "Xizmatlar bilan tanishish"
+      button1: "Bepul konsultatsiya",
+      button2: "📞 +998 99 236 06 31"
     },
     ru: {
       title: "DENTIFY CLINIC",
       subtitle: "Ваша улыбка - наша цель! Современные стоматологические услуги, профессиональные врачи и доступные цены. Выбирайте нас для здоровых зубов и красивой улыбки!",
-      button1: "Записаться на прием",
-      button2: "Ознакомиться с услугами"
+      button1: "Бесплатная консультация",
+      button2: "📞 +998 99 236 06 31"
     }
   };
 
