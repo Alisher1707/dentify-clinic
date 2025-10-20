@@ -6,60 +6,16 @@ const Hero = () => {
 
   const translations = {
     uz: {
-      title: "Sizning tabasumingiz - bizning g'urur manbaimiz",
-      subtitle: "Zamonaviy stomatologiya xizmatlari va professional shifokorlar jamoasi bilan sog'lom tabassum",
+      title: "DENTIFY CLINIC",
+      subtitle: "Sizning tabassumingiz - bizning maqsadimiz! Zamonaviy stomatologiya xizmatlari, professional shifokorlar va qulay narxlar. Sog'lom tishlar va chiroyli tabassum uchun bizni tanlang!",
       button1: "Qabulga yozilish",
-      button2: "Xizmatlar bilan tanishish",
-      features: [
-        {
-          icon: "⭐",
-          title: "Professional shifokorlar",
-          description: "15+ yillik tajribaga ega mutaxassislar"
-        },
-        {
-          icon: "🏥",
-          title: "Zamonaviy jihozlar",
-          description: "Eng so'nggi texnologiyalar"
-        },
-        {
-          icon: "💎",
-          title: "Sifatli xizmat",
-          description: "Yuqori sifat va qulay narxlar"
-        },
-        {
-          icon: "⏰",
-          title: "Qulay vaqt",
-          description: "Har kuni 9:00 dan 20:00 gacha"
-        }
-      ]
+      button2: "Xizmatlar bilan tanishish"
     },
     ru: {
-      title: "Ваша улыбка - наша гордость",
-      subtitle: "Современные стоматологические услуги и профессиональная команда врачей для здоровой улыбки",
+      title: "DENTIFY CLINIC",
+      subtitle: "Ваша улыбка - наша цель! Современные стоматологические услуги, профессиональные врачи и доступные цены. Выбирайте нас для здоровых зубов и красивой улыбки!",
       button1: "Записаться на прием",
-      button2: "Ознакомиться с услугами",
-      features: [
-        {
-          icon: "⭐",
-          title: "Профессиональные врачи",
-          description: "Специалисты с опытом 15+ лет"
-        },
-        {
-          icon: "🏥",
-          title: "Современное оборудование",
-          description: "Новейшие технологии"
-        },
-        {
-          icon: "💎",
-          title: "Качественный сервис",
-          description: "Высокое качество и доступные цены"
-        },
-        {
-          icon: "⏰",
-          title: "Удобное время",
-          description: "Ежедневно с 9:00 до 20:00"
-        }
-      ]
+      button2: "Ознакомиться с услугами"
     }
   };
 
@@ -88,16 +44,6 @@ const Hero = () => {
               <span className="tooth-emoji">🦷</span>
             </div>
           </div>
-        </div>
-
-        <div className="hero-features">
-          {t.features.map((feature, index) => (
-            <div key={index} className="feature-card">
-              <div className="feature-icon">{feature.icon}</div>
-              <h3 className="feature-title">{feature.title}</h3>
-              <p className="feature-description">{feature.description}</p>
-            </div>
-          ))}
         </div>
       </div>
     </section>
