@@ -1,10 +1,25 @@
 .hero {
   width: 100%;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, rgba(123, 40, 105, 0.92) 0%, rgba(88, 28, 135, 0.88) 100%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   padding: 4rem 0 2rem;
   min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(168, 85, 247, 0.15) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .hero-container {
@@ -12,18 +27,22 @@
   margin: 0 auto;
   padding: 0 2rem;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   margin-bottom: 4rem;
 }
 
 .hero-text {
-  animation: fadeInLeft 1s ease-out;
+  animation: fadeInUp 1s ease-out;
+  max-width: 900px;
 }
 
 .hero-title {
@@ -31,25 +50,33 @@
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .clinic-name {
-  color: #7B2869;
+  color: #ffffff;
   font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #f0e5ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #2d3748;
+  color: #f7f7f7;
   line-height: 1.8;
   margin-bottom: 2.5rem;
   font-weight: 500;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .hero-buttons {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-btn {
@@ -66,28 +93,58 @@
 }
 
 .hero-btn-primary {
-  background: #7B2869;
-  color: white;
-  box-shadow: 0 4px 15px rgba(123, 40, 105, 0.3);
+  background: #ffffff;
+  color: #7B2869;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
 }
 
 .hero-btn-primary:hover {
+  background: #f0e5ff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.5);
+}
+
+.hero-btn-secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.hero-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-location-btn {
+  padding: 0.9rem 2.8rem;
+  border-radius: 6px;
+  background: #7B2869;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(123, 40, 105, 0.3);
+}
+
+.hero-location-btn:hover {
   background: #5f1d52;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(123, 40, 105, 0.4);
 }
 
-.hero-btn-secondary {
-  background: white;
-  color: #7B2869;
-  border: 2px solid #7B2869;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.hero-btn-secondary:hover {
-  background: #7B2869;
-  color: white;
-  transform: translateY(-3px);
+.hero-location-btn svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .hero-image {
@@ -105,9 +162,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #7B2869 0%, #a855f7 100%);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
   border-radius: 50%;
-  box-shadow: 0 20px 60px rgba(123, 40, 105, 0.3);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 0 40px rgba(255, 255, 255, 0.1);
 }
 
 .tooth-emoji {
@@ -240,16 +300,11 @@
   .hero {
     padding: 2rem 0 1rem;
     min-height: auto;
+    background-attachment: scroll;
   }
 
   .hero-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
     margin-bottom: 2rem;
-  }
-
-  .hero-text {
-    text-align: center;
   }
 
   .hero-title {
@@ -267,6 +322,16 @@
   .hero-btn {
     padding: 0.8rem 2rem;
     font-size: 1rem;
+  }
+
+  .hero-location-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+  .hero-location-btn svg {
+    width: 18px;
+    height: 18px;
   }
 
   .hero-image-placeholder {
