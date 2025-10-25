@@ -6,10 +6,10 @@ const Contact = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80',
+    '/img/doctor-client.jpg',
     'https://images.unsplash.com/photo-1598531228433-d9f0cb960816?w=800&q=80',
-    'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80',
-    'https://images.unsplash.com/photo-1629909615184-74f495363b67?w=800&q=80'
+    '/img/tish-rasmi.webp',
+    '/img/stoma-room.webp'
   ];
 
   useEffect(() => {
