@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import './Contact.css';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Contact = () => {
   const [language, setLanguage] = useState('uz');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [sectionRef, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
   const images = [
     '/img/doctor-client.jpg',
@@ -36,7 +38,7 @@ const Contact = () => {
   const t = translations[language];
 
   return (
-    <section className="contact">
+    <section ref={sectionRef} className={`contact ${isVisible ? 'visible' : ''}`}>
       <div className="contact-container">
         <div className="contact-content">
           <div className="contact-text">

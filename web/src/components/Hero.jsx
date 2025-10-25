@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import './Hero.css';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Hero = () => {
   const [language, setLanguage] = useState('uz');
+  const [sectionRef, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
   const translations = {
     uz: {
@@ -24,7 +26,7 @@ const Hero = () => {
   const t = translations[language];
 
   return (
-    <section className="hero">
+    <section ref={sectionRef} className={`hero ${isVisible ? 'visible' : ''}`}>
       <div className="hero-container">
         <div className="hero-content">
           <div className="hero-text">

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import './Testimonials.css';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Testimonials = () => {
   const [language, setLanguage] = useState('uz');
@@ -9,6 +10,7 @@ const Testimonials = () => {
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
   const carouselRef = useRef(null);
+  const [sectionRef, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
   const translations = {
     uz: {
@@ -422,7 +424,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="testimonials">
+    <section ref={sectionRef} className={`testimonials ${isVisible ? 'visible' : ''}`}>
       <div className="testimonials-container">
         <h2 className="testimonials-title">{t.title}</h2>
 

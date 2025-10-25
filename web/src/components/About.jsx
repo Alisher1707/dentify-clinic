@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import './About.css';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const About = () => {
   const [language, setLanguage] = useState('uz');
+  const [sectionRef, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
   const translations = {
     uz: {
@@ -54,7 +56,7 @@ const About = () => {
   const t = translations[language];
 
   return (
-    <section className="about">
+    <section ref={sectionRef} className={`about ${isVisible ? 'visible' : ''}`}>
       <div className="about-container">
         <div className="about-content">
           <div className="about-image">

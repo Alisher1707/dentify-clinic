@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import './Services.css';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Services = () => {
   const [language, setLanguage] = useState('uz');
+  const [sectionRef, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
   const translations = {
     uz: {
@@ -68,7 +70,7 @@ const Services = () => {
   };
 
   return (
-    <section className="services">
+    <section ref={sectionRef} className={`services ${isVisible ? 'visible' : ''}`}>
       <div className="services-container">
         <h2 className="services-title">{t.title}</h2>
 
