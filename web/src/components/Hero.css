@@ -1,9 +1,9 @@
 .hero {
   width: 100%;
-  background: linear-gradient(135deg, rgba(123, 40, 105, 0.92) 0%, rgba(88, 28, 135, 0.88) 100%);
+  background: url('/img/hero-background.webp');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   padding: 4rem 0 2rem;
   min-height: calc(100vh - 80px);
   display: flex;
@@ -18,7 +18,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(168, 85, 247, 0.15) 0%, transparent 50%);
+  background: rgba(0, 0, 0, 0.5);
   pointer-events: none;
 }
 
@@ -51,25 +51,22 @@
   line-height: 1.2;
   margin-bottom: 1.5rem;
   color: #ffffff;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .clinic-name {
   color: #ffffff;
   font-weight: 800;
-  background: linear-gradient(135deg, #ffffff 0%, #f0e5ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  color: #f7f7f7;
+  font-size: 1.15rem;
+  color: #ffffff;
   line-height: 1.8;
   margin-bottom: 2.5rem;
-  font-weight: 500;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  font-weight: 400;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  max-width: 900px;
 }
 
 .hero-buttons {
@@ -93,27 +90,26 @@
 }
 
 .hero-btn-primary {
-  background: #ffffff;
-  color: #7B2869;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+  background: #7B2869;
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(123, 40, 105, 0.4);
 }
 
 .hero-btn-primary:hover {
-  background: #f0e5ff;
+  background: #5f1d52;
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 6px 25px rgba(123, 40, 105, 0.6);
 }
 
 .hero-btn-secondary {
-  background: rgba(255, 255, 255, 0.15);
+  background: transparent;
   color: #ffffff;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid #ffffff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
 }
 
 .hero-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
   border-color: #ffffff;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -122,7 +118,7 @@
 .hero-location-btn {
   padding: 0.9rem 2.8rem;
   border-radius: 6px;
-  background: #7B2869;
+  background: #7B2869 !important;
   border: none;
   display: inline-flex;
   align-items: center;
@@ -130,17 +126,28 @@
   gap: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(123, 40, 105, 0.3);
+  box-shadow: 0 4px 20px rgba(123, 40, 105, 0.4);
 }
 
 .hero-location-btn:hover {
-  background: #5f1d52;
+  background: #5f1d52 !important;
+  color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(123, 40, 105, 0.4);
+  box-shadow: 0 6px 25px rgba(123, 40, 105, 0.6);
+}
+
+.hero-location-btn:visited {
+  color: #ffffff !important;
+  background: #7B2869 !important;
+}
+
+.hero-location-btn:active {
+  color: #ffffff !important;
+  background: #7B2869 !important;
 }
 
 .hero-location-btn svg {
@@ -148,12 +155,19 @@
 }
 
 .hero-image {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   animation: fadeInRight 1s ease-out;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 .tooth-circle {
@@ -300,7 +314,6 @@
   .hero {
     padding: 2rem 0 1rem;
     min-height: auto;
-    background-attachment: scroll;
   }
 
   .hero-content {
@@ -334,13 +347,8 @@
     height: 18px;
   }
 
-  .hero-image-placeholder {
-    width: 250px;
-    height: 250px;
-  }
-
-  .hero-icon {
-    font-size: 6rem;
+  .hero-image {
+    order: -1;
   }
 
   .hero-features {
