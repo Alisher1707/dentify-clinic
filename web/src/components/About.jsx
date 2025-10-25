@@ -60,7 +60,7 @@ const About = () => {
           <div className="about-image">
             <div className="image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80"
+                src="/img/reception.jpg"
                 alt="Dentify Clinic Interior"
                 className="clinic-image"
               />
