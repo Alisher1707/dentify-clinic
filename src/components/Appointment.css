@@ -1,0 +1,139 @@
+.appointment-section {
+  padding: 60px 20px;
+  background-color: #f8f8f8;
+}
+
+.appointment-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left side - Image */
+.appointment-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.doctor-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Right side - Form */
+.appointment-form-wrapper {
+  flex: 1;
+  min-width: 300px;
+}
+
+.appointment-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-input,
+.form-textarea {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.form-input {
+  flex: 1;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #999;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.form-textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-button {
+  padding: 12px 32px;
+  background-color: #730D67;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: flex-end;
+}
+
+.submit-button:hover {
+  background-color: #5f1d52;
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+.checkmark {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .appointment-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .appointment-title {
+    font-size: 24px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-input {
+    width: 100%;
+  }
+
+  .submit-button {
+    align-self: flex-start;
+  }
+}
