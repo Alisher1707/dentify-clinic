@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { LanguageProvider } from "./contexts/LanguageProvider"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
@@ -8,21 +9,41 @@ import Contact from "./components/Contact"
 import Appointment from "./components/Appointment"
 import Location from "./components/Location"
 import Footer from "./components/Footer"
+import ServicesPage from "./components/ServicesPage"
 import "./App.css"
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const navigateToServices = () => {
+    setCurrentPage('services');
+    window.scrollTo(0, 0);
+  };
+
+  const navigateToHome = () => {
+    setCurrentPage('home');
+    window.scrollTo(0, 0);
+  };
+
   return (
     <LanguageProvider>
       <div className="App">
-        <Navbar />
-        <Hero />
-        <About />
-        <Contact />
-        <Services />
-        <Testimonials />
-        <Appointment />
-        <Location />
-        <Footer />
+        <Navbar onNavigateToServices={navigateToServices} onNavigateToHome={navigateToHome} />
+
+        {currentPage === 'home' ? (
+          <>
+            <Hero />
+            <About />
+            <Contact />
+            <Services />
+            <Testimonials />
+            <Appointment />
+            <Location />
+            <Footer />
+          </>
+        ) : (
+          <ServicesPage onBackToHome={navigateToHome} />
+        )}
       </div>
     </LanguageProvider>
   )

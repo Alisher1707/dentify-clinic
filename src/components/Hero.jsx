@@ -33,7 +33,7 @@ const Hero = () => {
   const t = translations[language];
 
   return (
-    <section ref={sectionRef} className={`hero ${isVisible ? 'visible' : ''}`}>
+    <section id="home" ref={sectionRef} className={`hero ${isVisible ? 'visible' : ''}`}>
       <div className="hero-container">
         <div className="hero-content">
           <div className="hero-text">

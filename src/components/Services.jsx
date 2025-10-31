@@ -84,7 +84,7 @@ const Services = () => {
   };
 
   return (
-    <section ref={sectionRef} className={`services ${isVisible ? 'visible' : ''}`}>
+    <section id="services" ref={sectionRef} className={`services ${isVisible ? 'visible' : ''}`}>
       <div className="services-container">
         <h2 className="services-title">{t.title}</h2>
 

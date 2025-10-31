@@ -44,7 +44,7 @@ const Contact = () => {
   const t = translations[language];
 
   return (
-    <section ref={sectionRef} className={`contact ${isVisible ? 'visible' : ''}`}>
+    <section id="contacts" ref={sectionRef} className={`contact ${isVisible ? 'visible' : ''}`}>
       <div className="contact-container">
         <div className="contact-content">
           <div className="contact-text">

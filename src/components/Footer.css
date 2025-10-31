@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  background: linear-gradient(135deg, #730D67 0%, #5a0a51 100%);
   color: #e2e8f0;
   padding: 4rem 0 1.5rem;
   position: relative;
@@ -14,7 +14,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #7B2869, #a73489, #7B2869);
+  background: linear-gradient(90deg, #730D67, #9e1287, #730D67);
 }
 
 .footer-container {
@@ -52,7 +52,7 @@
   left: 0;
   width: 50px;
   height: 3px;
-  background: #7B2869;
+  background: #ffffff;
   border-radius: 2px;
 }
 
@@ -72,7 +72,7 @@
 
 .logo-icon {
   font-size: 2rem;
-  filter: drop-shadow(0 2px 4px rgba(123, 40, 105, 0.3));
+  filter: drop-shadow(0 2px 4px rgba(115, 13, 103, 0.3));
 }
 
 .logo-text {
@@ -107,7 +107,7 @@
 }
 
 .list-icon {
-  color: #7B2869;
+  color: #ffffff;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -127,7 +127,7 @@
 .contact-icon {
   width: 20px;
   height: 20px;
-  color: #7B2869;
+  color: #ffffff;
   flex-shrink: 0;
 }
 
@@ -168,10 +168,10 @@
 }
 
 .social-link:hover {
-  background: #7B2869;
+  background: #730D67;
   color: #ffffff;
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(123, 40, 105, 0.4);
+  box-shadow: 0 8px 20px rgba(115, 13, 103, 0.4);
 }
 
 .social-link svg {
@@ -202,7 +202,7 @@
 }
 
 .developer-name {
-  color: #7B2869;
+  color: #730D67;
   font-weight: 600;
 }
 

@@ -78,7 +78,7 @@ const About = () => {
   const t = translations[language];
 
   return (
-    <section ref={sectionRef} className={`about ${isVisible ? 'visible' : ''}`}>
+    <section id="structure" ref={sectionRef} className={`about ${isVisible ? 'visible' : ''}`}>
       <div className="about-container">
         <div className="about-content">
           <div className="about-image">
