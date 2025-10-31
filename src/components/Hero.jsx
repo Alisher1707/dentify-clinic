@@ -20,6 +20,13 @@ const Hero = () => {
       button1: "Бесплатная консультация",
       button2: "📞 +998 99 236 06 31",
       locationBtn: "Наш адрес"
+    },
+    en: {
+      clinicName: "DENTIFY CLINIC",
+      subtitle: "Your smile is our goal! Modern dental services, professional doctors and affordable prices. Choose us for healthy teeth and a beautiful smile!",
+      button1: "Free Consultation",
+      button2: "📞 +998 99 236 06 31",
+      locationBtn: "Our Location"
     }
   };
 

@@ -20,6 +20,13 @@ export default function Appointment() {
       phonePlaceholder: "+998",
       messagePlaceholder: "Ваши вопросы / предпочтительное время записи",
       submitButton: "Отправить"
+    },
+    en: {
+      title: "Submit a request for detailed consultation!",
+      namePlaceholder: "First and Last Name",
+      phonePlaceholder: "+998",
+      messagePlaceholder: "Your questions / preferred appointment time",
+      submitButton: "Submit"
     }
   };
 

@@ -5,7 +5,11 @@ export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState('uz');
 
   const toggleLanguage = () => {
-    setLanguage(prev => prev === 'uz' ? 'ru' : 'uz');
+    setLanguage(prev => {
+      if (prev === 'uz') return 'ru';
+      if (prev === 'ru') return 'en';
+      return 'uz';
+    });
   };
 
   const value = {

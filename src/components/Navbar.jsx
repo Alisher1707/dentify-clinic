@@ -1,8 +1,10 @@
 import './Navbar.css';
+import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Navbar = () => {
-  const { language, toggleLanguage } = useLanguage();
+  const { language, setLanguage } = useLanguage();
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
 
   const translations = {
     uz: {
@@ -18,10 +20,42 @@ const Navbar = () => {
       structure: 'Структура клиники',
       contacts: 'Контакты',
       request: 'Оставить заявку',
+    },
+    en: {
+      home: 'Home',
+      services: 'Services',
+      structure: 'Clinic Structure',
+      contacts: 'Contacts',
+      request: 'Submit Request',
     }
   };
 
   const t = translations[language];
+
+  const languages = [
+    {
+      code: 'uz',
+      name: "O'ZB",
+      flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/320px-Flag_of_Uzbekistan.svg.png'
+    },
+    {
+      code: 'ru',
+      name: 'РУС',
+      flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/320px-Flag_of_Russia.svg.png'
+    },
+    {
+      code: 'en',
+      name: 'ENG',
+      flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/320px-Flag_of_the_United_Kingdom_%281-2%29.svg.png'
+    }
+  ];
+
+  const currentLanguage = languages.find(lang => lang.code === language);
+
+  const handleLanguageChange = (langCode) => {
+    setLanguage(langCode);
+    setIsLanguageOpen(false);
+  };
 
   return (
     <nav className="navbar">
@@ -51,10 +85,31 @@ const Navbar = () => {
             +998(99) 236-06-31
           </a>
 
-          {/* Language Switcher */}
-          <button className="language-switcher" onClick={toggleLanguage}>
-            {language === 'uz' ? 'UZ' : 'RU'}
-          </button>
+          {/* Language Switcher with Dropdown */}
+          <div className="language-dropdown">
+            <button
+              className="language-switcher"
+              onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+            >
+              <img src={currentLanguage.flagUrl} alt={currentLanguage.name} className="current-flag" />
+              <span className="dropdown-arrow">{isLanguageOpen ? '▲' : '▼'}</span>
+            </button>
+
+            {isLanguageOpen && (
+              <div className="language-menu">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    className={`language-option ${language === lang.code ? 'active' : ''}`}
+                    onClick={() => handleLanguageChange(lang.code)}
+                  >
+                    <img src={lang.flagUrl} alt={lang.name} className="flag-image" />
+                    <span className="lang-name">{lang.name}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </nav>

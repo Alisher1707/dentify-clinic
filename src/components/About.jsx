@@ -50,6 +50,28 @@ const About = () => {
           title: "Создание красивой улыбки вместе со здоровьем зубов"
         }
       ]
+    },
+    en: {
+      badge: "About Us",
+      title: "DENTIFY CLINIC",
+      description1: "is a modern dental clinic that uses advanced technologies in preserving and restoring oral health. We strive to provide each patient with professional service, painless treatment and a comfortable environment.",
+      description2: "At our clinic, highly qualified doctors, modern equipment and an individual approach ensure the health of your teeth and a beautiful smile. We provide all services from prevention to complex implantation and aesthetic dentistry.",
+      button: "Our Services",
+      partnershipTitle: "Main goals of DENTIFY clinic",
+      features: [
+        {
+          title: "Individual approach to each patient and modern treatment methods"
+        },
+        {
+          title: "Team of qualified dentists with over 10 years of experience"
+        },
+        {
+          title: "State-of-the-art equipment for oral cavity diagnostics"
+        },
+        {
+          title: "Creating a beautiful smile along with dental health"
+        }
+      ]
     }
   };
 

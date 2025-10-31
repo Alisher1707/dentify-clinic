@@ -34,6 +34,20 @@ const Services = () => {
         { name: "Хирургия", icon: "surgery" },
         { name: "Диагностика", icon: "diagnostics" }
       ]
+    },
+    en: {
+      title: "DENTIFY clinic offers the following types of highly qualified dental services",
+      button: "For more information",
+      services: [
+        { name: "Dental Treatment", icon: "treatment" },
+        { name: "Implantation", icon: "implant" },
+        { name: "Orthodontics", icon: "orthodontics" },
+        { name: "Periodontics", icon: "periodontics" },
+        { name: "Teeth Whitening", icon: "whitening" },
+        { name: "Pediatric Dentistry", icon: "pediatric" },
+        { name: "Surgery", icon: "surgery" },
+        { name: "Diagnostics", icon: "diagnostics" }
+      ]
     }
   };
 

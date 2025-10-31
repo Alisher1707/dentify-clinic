@@ -33,6 +33,11 @@ const Contact = () => {
       title: "Для подробной информации, регистрации и заявки звоните на сайт или по номеру:",
       phone: "+998(99) 236-06-31",
       button: "Оставить заявку"
+    },
+    en: {
+      title: "For detailed information, registration and application, call the website or number:",
+      phone: "+998(99) 236-06-31",
+      button: "Submit Request"
     }
   };
 
