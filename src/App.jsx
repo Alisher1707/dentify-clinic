@@ -6,6 +6,8 @@ import Services from "./components/Services"
 import Testimonials from "./components/Testimonials"
 import Contact from "./components/Contact"
 import Appointment from "./components/Appointment"
+import Location from "./components/Location"
+import Footer from "./components/Footer"
 import "./App.css"
 
 function App() {
@@ -15,10 +17,12 @@ function App() {
         <Navbar />
         <Hero />
         <About />
-        <Services />
-        <Appointment />
-        <Testimonials />
         <Contact />
+        <Services />
+        <Testimonials />
+        <Appointment />
+        <Location />
+        <Footer />
       </div>
     </LanguageProvider>
   )

@@ -1,8 +1,10 @@
 import "./Appointment.css"
 import { useLanguage } from '../contexts/LanguageContext';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function Appointment() {
   const { language } = useLanguage();
+  const [sectionRef, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
   const translations = {
     uz: {
@@ -30,7 +32,7 @@ export default function Appointment() {
   }
 
   return (
-    <section className="appointment-section">
+    <section ref={sectionRef} className={`appointment-section ${isVisible ? 'visible' : ''}`}>
       <div className="appointment-container">
         {/* Left side - Doctor image */}
         <div className="appointment-image">

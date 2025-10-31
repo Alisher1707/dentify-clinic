@@ -60,6 +60,7 @@
   animation: fadeInUp 1s ease-out;
   animation-fill-mode: both;
   gap: 1rem;
+  cursor: pointer;
 }
 
 .service-card:nth-child(1) { animation-delay: 0.1s; }
