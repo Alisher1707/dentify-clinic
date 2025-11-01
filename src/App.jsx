@@ -11,6 +11,7 @@ import Location from "./components/Location"
 import Footer from "./components/Footer"
 import ServicesPage from "./components/ServicesPage"
 import ClinicStructure from "./components/ClinicStructure"
+import ContactsPage from "./components/ContactsPage"
 import "./App.css"
 
 function App() {
@@ -26,6 +27,11 @@ function App() {
     window.scrollTo(0, 0);
   };
 
+  const navigateToContacts = () => {
+    setCurrentPage('contacts');
+    window.scrollTo(0, 0);
+  };
+
   const navigateToHome = () => {
     setCurrentPage('home');
     window.scrollTo(0, 0);
@@ -37,6 +43,7 @@ function App() {
         <Navbar
           onNavigateToServices={navigateToServices}
           onNavigateToStructure={navigateToStructure}
+          onNavigateToContacts={navigateToContacts}
           onNavigateToHome={navigateToHome}
         />
 
@@ -55,6 +62,8 @@ function App() {
           <ServicesPage onBackToHome={navigateToHome} />
         ) : currentPage === 'structure' ? (
           <ClinicStructure onBackToHome={navigateToHome} />
+        ) : currentPage === 'contacts' ? (
+          <ContactsPage onBackToHome={navigateToHome} />
         ) : null}
       </div>
     </LanguageProvider>
