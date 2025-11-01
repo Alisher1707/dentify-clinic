@@ -2,7 +2,7 @@ import './Navbar.css';
 import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const Navbar = ({ onNavigateToServices, onNavigateToHome }) => {
+const Navbar = ({ onNavigateToServices, onNavigateToStructure, onNavigateToHome }) => {
   const { language, setLanguage } = useLanguage();
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
 
@@ -69,7 +69,7 @@ const Navbar = ({ onNavigateToServices, onNavigateToHome }) => {
         <ul className="navbar-menu">
           <li><a href="#home" onClick={(e) => { e.preventDefault(); onNavigateToHome && onNavigateToHome(); }}>{t.home}</a></li>
           <li><a href="#services" onClick={(e) => { e.preventDefault(); onNavigateToServices && onNavigateToServices(); }}>{t.services}</a></li>
-          <li><a href="#structure" onClick={(e) => { e.preventDefault(); onNavigateToHome && onNavigateToHome(); }}>{t.structure}</a></li>
+          <li><a href="#structure" onClick={(e) => { e.preventDefault(); onNavigateToStructure && onNavigateToStructure(); }}>{t.structure}</a></li>
           <li><a href="#contacts" onClick={(e) => { e.preventDefault(); onNavigateToHome && onNavigateToHome(); }}>{t.contacts}</a></li>
         </ul>
 

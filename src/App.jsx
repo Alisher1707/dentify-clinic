@@ -10,6 +10,7 @@ import Appointment from "./components/Appointment"
 import Location from "./components/Location"
 import Footer from "./components/Footer"
 import ServicesPage from "./components/ServicesPage"
+import ClinicStructure from "./components/ClinicStructure"
 import "./App.css"
 
 function App() {
@@ -17,6 +18,11 @@ function App() {
 
   const navigateToServices = () => {
     setCurrentPage('services');
+    window.scrollTo(0, 0);
+  };
+
+  const navigateToStructure = () => {
+    setCurrentPage('structure');
     window.scrollTo(0, 0);
   };
 
@@ -28,7 +34,11 @@ function App() {
   return (
     <LanguageProvider>
       <div className="App">
-        <Navbar onNavigateToServices={navigateToServices} onNavigateToHome={navigateToHome} />
+        <Navbar
+          onNavigateToServices={navigateToServices}
+          onNavigateToStructure={navigateToStructure}
+          onNavigateToHome={navigateToHome}
+        />
 
         {currentPage === 'home' ? (
           <>
@@ -41,9 +51,11 @@ function App() {
             <Location />
             <Footer />
           </>
-        ) : (
+        ) : currentPage === 'services' ? (
           <ServicesPage onBackToHome={navigateToHome} />
-        )}
+        ) : currentPage === 'structure' ? (
+          <ClinicStructure onBackToHome={navigateToHome} />
+        ) : null}
       </div>
     </LanguageProvider>
   )
