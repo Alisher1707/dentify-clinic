@@ -39,7 +39,7 @@ export default function Appointment() {
   }
 
   return (
-    <section ref={sectionRef} className={`appointment-section ${isVisible ? 'visible' : ''}`}>
+    <section id="appointment" ref={sectionRef} className={`appointment-section ${isVisible ? 'visible' : ''}`}>
       <div className="appointment-container">
         {/* Left side - Doctor image */}
         <div className="appointment-image">

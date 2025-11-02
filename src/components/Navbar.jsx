@@ -57,6 +57,13 @@ const Navbar = ({ onNavigateToServices, onNavigateToStructure, onNavigateToConta
     setIsLanguageOpen(false);
   };
 
+  const scrollToAppointment = () => {
+    const appointmentSection = document.getElementById('appointment');
+    if (appointmentSection) {
+      appointmentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -76,7 +83,7 @@ const Navbar = ({ onNavigateToServices, onNavigateToStructure, onNavigateToConta
         {/* Right Side: Button, Phone, Language */}
         <div className="navbar-right">
           {/* Request Button */}
-          <button className="request-button">
+          <button className="request-button" onClick={scrollToAppointment}>
             {t.request} <span className="arrow">→</span>
           </button>
 

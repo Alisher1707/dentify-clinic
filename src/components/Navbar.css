@@ -63,22 +63,24 @@
 .request-button {
   background: white;
   color: #7B2869;
-  border: none;
-  padding: 0.7rem 1.8rem;
-  border-radius: 30px;
+  border: 2px solid #7B2869;
+  padding: 0.6rem 1.5rem;
+  border-radius: 6px;
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: none;
 }
 
 .request-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: white;
+  color: #7B2869;
+  border-color: #7B2869;
+  opacity: 0.9;
 }
 
 .request-button .arrow {
