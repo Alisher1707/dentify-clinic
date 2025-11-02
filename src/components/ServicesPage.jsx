@@ -4,7 +4,7 @@ import Testimonials from './Testimonials';
 import Footer from './Footer';
 import './ServicesPage.css';
 
-const ServicesPage = ({ onBackToHome }) => {
+const ServicesPage = () => {
   const { language } = useLanguage();
 
   const translations = {

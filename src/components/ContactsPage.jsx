@@ -2,7 +2,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import Footer from './Footer';
 import './ContactsPage.css';
 
-const ContactsPage = ({ onBackToHome }) => {
+const ContactsPage = () => {
   const { language } = useLanguage();
 
   // Taksi buyurtma qilish funksiyasi

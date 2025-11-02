@@ -1,8 +1,9 @@
 import './Navbar.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const Navbar = ({ onNavigateToServices, onNavigateToStructure, onNavigateToContacts, onNavigateToHome }) => {
+const Navbar = () => {
   const { language, setLanguage } = useLanguage();
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
 
@@ -74,10 +75,10 @@ const Navbar = ({ onNavigateToServices, onNavigateToStructure, onNavigateToConta
 
         {/* Menu Items */}
         <ul className="navbar-menu">
-          <li><a href="#home" onClick={(e) => { e.preventDefault(); onNavigateToHome && onNavigateToHome(); }}>{t.home}</a></li>
-          <li><a href="#services" onClick={(e) => { e.preventDefault(); onNavigateToServices && onNavigateToServices(); }}>{t.services}</a></li>
-          <li><a href="#structure" onClick={(e) => { e.preventDefault(); onNavigateToStructure && onNavigateToStructure(); }}>{t.structure}</a></li>
-          <li><a href="#contacts" onClick={(e) => { e.preventDefault(); onNavigateToContacts && onNavigateToContacts(); }}>{t.contacts}</a></li>
+          <li><Link to="/">{t.home}</Link></li>
+          <li><Link to="/services">{t.services}</Link></li>
+          <li><Link to="/structure">{t.structure}</Link></li>
+          <li><Link to="/contacts">{t.contacts}</Link></li>
         </ul>
 
         {/* Right Side: Button, Phone, Language */}

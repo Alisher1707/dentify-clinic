@@ -1,8 +1,10 @@
 import './Services.css';
+import { useNavigate } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const Services = ({ onNavigateToServices }) => {
+const Services = () => {
+  const navigate = useNavigate();
   const { language } = useLanguage();
   const [sectionRef, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
@@ -102,7 +104,7 @@ const Services = ({ onNavigateToServices }) => {
           ))}
         </div>
 
-        <button className="services-btn" onClick={onNavigateToServices}>
+        <button className="services-btn" onClick={() => navigate('/services')}>
           {t.button} <span className="arrow">→</span>
         </button>
       </div>

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { Routes, Route } from "react-router-dom"
 import { LanguageProvider } from "./contexts/LanguageProvider"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
@@ -15,56 +15,28 @@ import ContactsPage from "./components/ContactsPage"
 import "./App.css"
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
-
-  const navigateToServices = () => {
-    setCurrentPage('services');
-    window.scrollTo(0, 0);
-  };
-
-  const navigateToStructure = () => {
-    setCurrentPage('structure');
-    window.scrollTo(0, 0);
-  };
-
-  const navigateToContacts = () => {
-    setCurrentPage('contacts');
-    window.scrollTo(0, 0);
-  };
-
-  const navigateToHome = () => {
-    setCurrentPage('home');
-    window.scrollTo(0, 0);
-  };
-
   return (
     <LanguageProvider>
       <div className="App">
-        <Navbar
-          onNavigateToServices={navigateToServices}
-          onNavigateToStructure={navigateToStructure}
-          onNavigateToContacts={navigateToContacts}
-          onNavigateToHome={navigateToHome}
-        />
+        <Navbar />
 
-        {currentPage === 'home' ? (
-          <>
-            <Hero />
-            <About />
-            <Contact />
-            <Services onNavigateToServices={navigateToServices} />
-            <Testimonials />
-            <Appointment />
-            <Location />
-            <Footer />
-          </>
-        ) : currentPage === 'services' ? (
-          <ServicesPage onBackToHome={navigateToHome} />
-        ) : currentPage === 'structure' ? (
-          <ClinicStructure onBackToHome={navigateToHome} />
-        ) : currentPage === 'contacts' ? (
-          <ContactsPage onBackToHome={navigateToHome} />
-        ) : null}
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <About />
+              <Contact />
+              <Services />
+              <Testimonials />
+              <Appointment />
+              <Location />
+              <Footer />
+            </>
+          } />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/structure" element={<ClinicStructure />} />
+          <Route path="/contacts" element={<ContactsPage />} />
+        </Routes>
       </div>
     </LanguageProvider>
   )

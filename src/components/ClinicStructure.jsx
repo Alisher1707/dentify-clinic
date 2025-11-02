@@ -2,7 +2,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import Footer from './Footer';
 import './ClinicStructure.css';
 
-const ClinicStructure = ({ onBackToHome }) => {
+const ClinicStructure = () => {
   const { language } = useLanguage();
 
   const translations = {
