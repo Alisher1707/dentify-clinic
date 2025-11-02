@@ -6,6 +6,13 @@ const Hero = () => {
   const { language } = useLanguage();
   const [sectionRef, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
+  const scrollToPartnership = () => {
+    const partnershipSection = document.getElementById('partnership');
+    if (partnershipSection) {
+      partnershipSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const translations = {
     uz: {
       clinicName: "DENTIFY CLINIC",
@@ -43,12 +50,12 @@ const Hero = () => {
             <p className="hero-subtitle">{t.subtitle}</p>
 
             <div className="hero-buttons">
-              <button className="hero-btn hero-btn-primary">
+              <button className="hero-btn hero-btn-primary" onClick={scrollToPartnership}>
                 {t.button1}
               </button>
-              <button className="hero-btn hero-btn-secondary">
+              <a href="tel:+998992360631" className="hero-btn hero-btn-secondary">
                 {t.button2}
-              </button>
+              </a>
               <a
                 href="https://maps.google.com/?q=DENTIFY+CLINIC"
                 target="_blank"

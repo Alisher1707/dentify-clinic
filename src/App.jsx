@@ -52,7 +52,7 @@ function App() {
             <Hero />
             <About />
             <Contact />
-            <Services />
+            <Services onNavigateToServices={navigateToServices} />
             <Testimonials />
             <Appointment />
             <Location />

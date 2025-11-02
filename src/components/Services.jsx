@@ -2,7 +2,7 @@ import './Services.css';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const Services = () => {
+const Services = ({ onNavigateToServices }) => {
   const { language } = useLanguage();
   const [sectionRef, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
@@ -102,7 +102,7 @@ const Services = () => {
           ))}
         </div>
 
-        <button className="services-btn">
+        <button className="services-btn" onClick={onNavigateToServices}>
           {t.button} <span className="arrow">→</span>
         </button>
       </div>

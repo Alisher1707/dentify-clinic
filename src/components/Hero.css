@@ -117,10 +117,11 @@
 }
 
 .hero-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: transparent;
   border-color: #ffffff;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
 
 .hero-location-btn {

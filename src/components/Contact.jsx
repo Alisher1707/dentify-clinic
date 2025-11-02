@@ -8,6 +8,13 @@ const Contact = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [sectionRef, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
+  const scrollToAppointment = () => {
+    const appointmentSection = document.getElementById('appointment');
+    if (appointmentSection) {
+      appointmentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const images = [
     '/img/doctor-client.jpg',
     'https://images.unsplash.com/photo-1598531228433-d9f0cb960816?w=800&q=80',
@@ -54,7 +61,7 @@ const Contact = () => {
               {t.phone}
             </a>
 
-            <button className="contact-btn">
+            <button className="contact-btn" onClick={scrollToAppointment}>
               {t.button} <span className="check-icon">✓</span>
             </button>
           </div>

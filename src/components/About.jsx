@@ -6,6 +6,13 @@ const About = () => {
   const { language } = useLanguage();
   const [sectionRef, isVisible] = useScrollAnimation({ threshold: 0.1 });
 
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const translations = {
     uz: {
       badge: "Biz haqimizda",
@@ -103,14 +110,14 @@ const About = () => {
               {t.description2}
             </p>
 
-            <button className="about-btn">
+            <button className="about-btn" onClick={scrollToServices}>
               {t.button} →
             </button>
           </div>
         </div>
 
         {/* Partnership Section */}
-        <div className="partnership-section">
+        <div id="partnership" className="partnership-section">
           <h2 className="partnership-title">{t.partnershipTitle}</h2>
           <div className="features-grid">
             {t.features.map((feature, index) => (
