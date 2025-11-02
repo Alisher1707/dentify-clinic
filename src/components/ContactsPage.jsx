@@ -5,6 +5,21 @@ import './ContactsPage.css';
 const ContactsPage = ({ onBackToHome }) => {
   const { language } = useLanguage();
 
+  // Taksi buyurtma qilish funksiyasi
+  const handleTaxiOrder = () => {
+    // Yandex Taxi ilovasini ochish (agar mavjud bo'lsa) yoki veb-saytga yo'naltirish
+    const clinicAddress = "Toshkent shahar, Chilonzor tumani, Muqimiy ko'chasi 7/1";
+    const yandexTaxiUrl = `https://3.redirect.appmetrica.yandex.com/route?end-lat=41.31108597927042&end-lon=69.24050931542795&appmetrica_tracking_id=1178268795219780156`;
+    window.open(yandexTaxiUrl, '_blank');
+  };
+
+  // Xaritada ko'rish funksiyasi
+  const handleViewOnMap = () => {
+    // Google Maps da joylashuvni ochish
+    const mapUrl = "https://www.google.com/maps?q=41.31108597927042,69.24050931542795";
+    window.open(mapUrl, '_blank');
+  };
+
   const translations = {
     uz: {
       title: "Kontaktlar",
@@ -73,11 +88,11 @@ const ContactsPage = ({ onBackToHome }) => {
                 </div>
               </div>
 
-              <button className="taxi-button">
+              <button className="taxi-button" onClick={handleTaxiOrder}>
                 {t.taxiButton} →
               </button>
 
-              <button className="map-view-button">
+              <button className="map-view-button" onClick={handleViewOnMap}>
                 {t.mapButton}
               </button>
             </div>
