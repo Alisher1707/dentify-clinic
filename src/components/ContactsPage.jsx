@@ -1,14 +1,17 @@
 import { useLanguage } from '../contexts/LanguageContext';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import Footer from './Footer';
 import './ContactsPage.css';
 
 const ContactsPage = () => {
   const { language } = useLanguage();
+  const [titleRef, isTitleVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [contactInfoRef, isContactInfoVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [mapRef, isMapVisible] = useScrollAnimation({ threshold: 0.2 });
 
   // Taksi buyurtma qilish funksiyasi
   const handleTaxiOrder = () => {
     // Yandex Taxi ilovasini ochish (agar mavjud bo'lsa) yoki veb-saytga yo'naltirish
-    const clinicAddress = "Toshkent shahar, Chilonzor tumani, Muqimiy ko'chasi 7/1";
     const yandexTaxiUrl = `https://3.redirect.appmetrica.yandex.com/route?end-lat=41.31108597927042&end-lon=69.24050931542795&appmetrica_tracking_id=1178268795219780156`;
     window.open(yandexTaxiUrl, '_blank');
   };
@@ -63,11 +66,19 @@ const ContactsPage = () => {
       {/* Main Content */}
       <section className="contacts-main-section">
         <div className="contacts-main-container">
-          <h2 className="map-section-title">{t.mapTitle}</h2>
+          <h2
+            ref={titleRef}
+            className={`map-section-title ${isTitleVisible ? 'animate-fade-in-up' : ''}`}
+          >
+            {t.mapTitle}
+          </h2>
 
           <div className="contacts-grid">
             {/* Left Side - Contact Info */}
-            <div className="contact-info-box">
+            <div
+              ref={contactInfoRef}
+              className={`contact-info-box ${isContactInfoVisible ? 'animate-slide-in-left' : ''}`}
+            >
               <h3 className="contact-box-title">{t.contactTitle}</h3>
 
               <div className="contact-info-items">
@@ -98,7 +109,10 @@ const ContactsPage = () => {
             </div>
 
             {/* Right Side - Map */}
-            <div className="map-box">
+            <div
+              ref={mapRef}
+              className={`map-box ${isMapVisible ? 'animate-slide-in-right' : ''}`}
+            >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.344280362768!2d69.24050931542795!3d41.31108597927042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b3f4a4a6d91%3A0x7c5d3e5a5b5a5b5a!2sMuqimiy%20Street%207%2F1%2C%20Tashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
                 width="100%"

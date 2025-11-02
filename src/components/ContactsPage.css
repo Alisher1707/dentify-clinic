@@ -55,6 +55,14 @@
   text-align: left;
   padding-bottom: 15px;
   border-bottom: none;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.map-section-title.animate-fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .contacts-grid {
@@ -71,6 +79,14 @@
   border-radius: 15px;
   padding: 40px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+
+.contact-info-box.animate-slide-in-left {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .contact-box-title {
@@ -91,6 +107,11 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateX(5px);
 }
 
 .info-icon {
@@ -168,6 +189,14 @@
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+}
+
+.map-box.animate-slide-in-right {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Animations */
