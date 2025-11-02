@@ -31,8 +31,7 @@ const Footer = () => {
       social: {
         title: "Ijtimoiy tarmoqlar"
       },
-      copyright: "© 2025 DENTIFY. Barcha huquqlar himoyalangan.",
-      developed: "Ishlab chiqildi"
+      copyright: "© 2025 DENTIFY. Barcha huquqlar himoyalangan."
     },
     ru: {
       about: {
@@ -60,8 +59,7 @@ const Footer = () => {
       social: {
         title: "Социальные сети"
       },
-      copyright: "© 2025 DENTIFY. Все права защищены.",
-      developed: "Разработано"
+      copyright: "© 2025 DENTIFY. Все права защищены."
     },
     en: {
       about: {
@@ -89,8 +87,7 @@ const Footer = () => {
       social: {
         title: "Social Media"
       },
-      copyright: "© 2025 DENTIFY. All rights reserved.",
-      developed: "Developed by"
+      copyright: "© 2025 DENTIFY. All rights reserved."
     }
   };
 
@@ -191,9 +188,6 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="footer-bottom">
           <p className="copyright">{t.copyright}</p>
-          <p className="developed">
-            {t.developed} <span className="developer-name">with ❤️</span>
-          </p>
         </div>
       </div>
     </footer>
